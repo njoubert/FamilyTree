@@ -1,0 +1,19 @@
+{
+	"nodes": [
+		{"id":1, "name": "Niels Joubert",           "father":9, "mother":4},
+		{"id":2, "name": "Dieter Joubert",          "father":9, "mother":4},
+		{"id":3, "name": "Pierre-Henri Joubert",    "father":9, "mother":4},
+		{"id":4, "name": "Lydia Joubert",           "father":7, "mother":8},
+		{"id":5, "name": "Josephine Ackerman",      "father":7, "mother":8},
+		{"id":6, "name": "Karen LeRoux",            "father":7, "mother":8},
+		{"id":7, "name": "Nellis Oosthuizen",       "father":0, "mother":0},
+		{"id":8, "name": "Gerda Oosthuizen",        "father":0, "mother":0},
+		{"id":9, "name": "Pierre Joubert",          "father":14, "mother":15},
+		{"id":10, "name": "Helene Joubert",         "father":14, "mother":15},
+		{"id":11, "name": "Sonja Joubert",          "father":14, "mother":15},
+		{"id":12, "name": "Hennie Joubert",         "father":14, "mother":15},
+		{"id":13, "name": "Gert Joubert",           "father":0, "mother":0},
+		{"id":14, "name": "Pieter Joubert",         "father":0, "mother":0},
+		{"id":15, "name": "Hardie Joubert",         "father":0, "mother":0},
+	]
+}
