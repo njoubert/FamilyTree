@@ -64,8 +64,6 @@
 		{"id":62, "name": "Pieter Joubert",                       "dob":"1900/01/01", "father":0,  "mother":0},
 		{"id":63, "name": "Sofia Joubert",                        "dob":"1900/01/01", "father":0,  "mother":0},
 		{"id":64, "name": "",             "dob":"1900/01/01", "father":0,  "mother":0},
-		{"id":65, "name": "",             "dob":"1900/01/01", "father":0,  "mother":0},
-		
-				
+		{"id":65, "name": "",             "dob":"1900/01/01", "father":0,  "mother":0}
 	]
 }
