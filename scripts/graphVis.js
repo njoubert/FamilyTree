@@ -1,6 +1,8 @@
 var svg = d3.select("svg"),
-    width = +svg.attr("width"),
-    height = +svg.attr("height");
+    width = window.innerWidth,
+    height = window.innerHeight;
+
+svg.attr("width", width).attr("height", height);
 
 var color = d3.scaleOrdinal(d3.schemeCategory20);
 
@@ -41,7 +43,7 @@ d3.json("db/family.json", function(error, graph) {
           .on("end", dragended));
 
   node.append("title")
-      .text(function(d) { return d.id; });
+      .text(function(d) { return d.name; });
 
   simulation
       .nodes(graph.nodes)
