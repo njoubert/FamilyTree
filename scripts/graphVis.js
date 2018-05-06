@@ -33,9 +33,11 @@ d3.json("db/family.json?v=1", function(error, graph) {
 
   var node = svg.append("g")
     .attr("class", "nodes")
-    .selectAll("circle")
+    .selectAll("g myCircles")
     .data(graph.nodes)
-    .enter().append("circle")
+    .enter().append("g");
+
+  node.append("circle")
       .attr("r", 5)
       .attr("fill", function(d) { if (d.s == 'm') { return "lightblue"; } else { return "pink"; } })
       .call(d3.drag()
@@ -43,8 +45,27 @@ d3.json("db/family.json?v=1", function(error, graph) {
           .on("drag", dragged)
           .on("end", dragended));
 
+
+
+  // var node = svg.append("g")
+  //   .attr("class", "nodes")
+  //   .selectAll("circle")
+  //   .data(graph.nodes)
+  //   .enter().append("circle")
+  //     .attr("r", 5)
+  //     .attr("fill", function(d) { if (d.s == 'm') { return "lightblue"; } else { return "pink"; } })
+  //     .call(d3.drag()
+  //         .on("start", dragstarted)
+  //         .on("drag", dragged)
+  //         .on("end", dragended));
+
   node.append("title")
       .text(function(d) { return d.name; });
+
+  node.append("text")
+    .attr("dx", function(d) {return -20;})
+    .attr("fill", function(d) { if (d.s == 'm') { return "lightblue"; } else { return "pink"; } })
+    .text(function(d) { return d.name; });
 
   simulation
       .nodes(graph.nodes)
@@ -60,9 +81,8 @@ d3.json("db/family.json?v=1", function(error, graph) {
         .attr("x2", function(d) { return d.target.x; })
         .attr("y2", function(d) { return d.target.y; });
 
-    node
-        .attr("cx", function(d) { return d.x; })
-        .attr("cy", function(d) { return d.y; });
+    node.attr("transform", function(d) { return "translate("+d.x+","+d.y+")";})
+  
   }
 
 });
