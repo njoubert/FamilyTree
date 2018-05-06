@@ -58,6 +58,7 @@ d3.json("db/family.json?v=1", function(error, graph) {
     .attr("pointer-events", "none")
     .attr("text-anchor", "middle")
     .attr("alignment-baseline", "baseline")
+    .attr("z", 1000)
     .attr("dy", -10)
     .style("opacity", 0)
     .text(function(d) { return d.name; })
