@@ -1,3 +1,4 @@
+
 var svg = d3.select("svg"),
     width = window.innerWidth,
     height = window.innerHeight;
@@ -11,7 +12,7 @@ var simulation = d3.forceSimulation()
     .force("charge", d3.forceManyBody())
     .force("center", d3.forceCenter(width / 2, height / 2));
 
-d3.json("db/family.json", function(error, graph) {
+d3.json("db/family.json?v=1", function(error, graph) {
   if (error) throw error;
 
   generateLinks(graph);
@@ -36,7 +37,7 @@ d3.json("db/family.json", function(error, graph) {
     .data(graph.nodes)
     .enter().append("circle")
       .attr("r", 5)
-      .attr("fill", function(d) { return color(d.group); })
+      .attr("fill", function(d) { if (d.s == 'm') { return "lightblue"; } else { return "pink"; } })
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
@@ -122,4 +123,5 @@ function dragended(d) {
   if (!d3.event.active) simulation.alphaTarget(0);
   d.fx = null;
   d.fy = null;
-}
+}  
+
