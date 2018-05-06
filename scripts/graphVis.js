@@ -37,13 +37,34 @@ d3.json("db/family.json?v=1", function(error, graph) {
     .data(graph.nodes)
     .enter().append("g");
 
+  node.on("mouseover", function(d) {d3.select(this).select("text").style("opacity", 1);})
+    .on("mouseout", function(d) {d3.select(this).select("text").style("opacity", 0);});
+
+
+
+
   node.append("circle")
       .attr("r", 5)
       .attr("fill", function(d) { if (d.s == 'm') { return "lightblue"; } else { return "pink"; } })
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
-          .on("end", dragended));
+          .on("end", dragended))
+      .append("title")
+      .text(function(d) { return d.name; });;
+
+  node.append("text")
+    .attr("fill", function(d) { if (d.s == 'm') { return "lightblue"; } else { return "pink"; } })
+    .attr("pointer-events", "none")
+    .attr("text-anchor", "middle")
+    .attr("alignment-baseline", "baseline")
+    .attr("dy", -10)
+    .style("opacity", 0)
+    .text(function(d) { return d.name; })
+          .call(d3.drag()
+          .on("start", dragstarted)
+          .on("drag", dragged)
+          .on("end", dragended))          
 
 
 
@@ -59,13 +80,6 @@ d3.json("db/family.json?v=1", function(error, graph) {
   //         .on("drag", dragged)
   //         .on("end", dragended));
 
-  node.append("title")
-      .text(function(d) { return d.name; });
-
-  node.append("text")
-    .attr("dx", function(d) {return -20;})
-    .attr("fill", function(d) { if (d.s == 'm') { return "lightblue"; } else { return "pink"; } })
-    .text(function(d) { return d.name; });
 
   simulation
       .nodes(graph.nodes)
