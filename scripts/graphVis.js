@@ -12,7 +12,7 @@ var simulation = d3.forceSimulation()
     .force("charge", d3.forceManyBody())
     .force("center", d3.forceCenter(width / 2, height / 2));
 
-d3.json("db/family.json?v=1", function(error, graph) {
+d3.json("db/family.json?v=3", function(error, graph) {
   if (error) throw error;
 
   generateLinks(graph);
@@ -41,8 +41,6 @@ d3.json("db/family.json?v=1", function(error, graph) {
     .on("mouseout", function(d) {d3.select(this).select("text").style("opacity", 0);});
 
 
-
-
   node.append("circle")
       .attr("r", 5)
       .attr("fill", function(d) { if (d.s == 'm') { return "lightblue"; } else { return "pink"; } })
@@ -61,7 +59,7 @@ d3.json("db/family.json?v=1", function(error, graph) {
     .attr("z", 1000)
     .attr("dy", -10)
     .style("opacity", 0)
-    .text(function(d) { return d.name; })
+    .text(function(d) { return d.name + " " + d.dob; })
           .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
