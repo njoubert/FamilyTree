@@ -7,7 +7,7 @@ Useful chart for cousin relationships https://lifehacker.com/second-cousins-once
 People:
 - Andrew Kok is besig on die familie geskiedenis te trace
 - Adrian in vleesbaai het 'n familiebybel
-- Oupa Piet kon nie sy Oupa se details onthou nie, maar hy het 'n suster wat die Jouberts familie geskiedenis weet.
+- Oupa Piet kon nie sy Oupa se details onthou nie, maar hy het 'n suster wat die Jouberts familie geskiedenis weet
 
 ## Programming Stuff
 
