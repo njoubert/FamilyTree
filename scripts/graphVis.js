@@ -43,7 +43,7 @@ d3.json("db/family.json?v=3", function(error, graph) {
 
   node.append("circle")
       .attr("r", 5)
-      .attr("fill", function(d) { if (d.s == 'm') { return "lightblue"; } else { return "pink"; } })
+      .attr("fill", function(d) { if (d.name === "") { return "lightgrey"; } else if (d.s == 'm') { return "lightblue"; } else { return "pink"; } })
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)

@@ -61,7 +61,7 @@
 		{"id":59, "name": "Adrian Oosthuizen",                    "dob":"1900/01/01", "father":0,  "mother":0, "s":"m"},
 		{"id":60, "name": "Henry C A Keyter",                     "dob":"1900/01/01", "father":0,  "mother":0, "s":"m"},
 		{"id":61, "name": "Helene Keyter nee Joubert",            "dob":"1900/01/01", "father":0,  "mother":0, "s":"f"},
-		{"id":62, "name": "Pieter Hendrik Joubert",               "dob":"~1902/07/15", "bp":"Harrismith, Free State, South Africa", "dp":"Parys, Free State, South Africa", "father":0,  "mother":0, "s":"m"},
+		{"id":62, "name": "Pieter Hendrik Joubert",               "dob":"~1902/07/15", "bp":"Harrismith, Free State, South Africa", "dp":"Parys, Free State, South Africa", "father":0,  "mother":0, "s":"m", "geni":"https://www.geni.com/people/pieter-joubert/6000000042530208759"},
 		{"id":63, "name": "Sophia Johanna Joubert nee Swart",     "dob":"between 1872 and 1932", "father":130,  "mother":0, "s":"f"},
 		{"id":64, "name": "Melanie Du Toit",                      "dob":"1900/01/01", "father":0,  "mother":0, "s":"f"},
 		{"id":65, "name": "Liliana 'Lily' Du Toit",               "dob":"1900/01/01", "father":29, "mother":64, "s":"f"},
