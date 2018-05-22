@@ -12,7 +12,7 @@ var simulation = d3.forceSimulation()
     .force("charge", d3.forceManyBody())
     .force("center", d3.forceCenter(width / 2, height / 2));
 
-d3.json("db/family.json?v=3", function(error, graph) {
+d3.json("db/family.json?v=5", function(error, graph) {
   if (error) throw error;
 
   generateLinks(graph);
