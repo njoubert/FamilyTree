@@ -1,5 +1,15 @@
 # FamilyTree
 
+
+## TODO:
+
+
+- Have an excellent graph visualization something or other.
+- Also track Education and Profession
+- Consider Google Sheets as backend, easy to collaboratively edit https://docs.google.com/spreadsheets/d/1ntGaYpGblv5ojv1od-33fzXErrPjWWYnx820AcmfWLQ/edit#gid=0
+
+
+
 ## Geneology Stuff
 
 Useful chart for cousin relationships https://lifehacker.com/second-cousins-once-removed-and-more-explained-in-1661572056
