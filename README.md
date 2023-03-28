@@ -6,6 +6,7 @@
 
 - Have an excellent graph visualization something or other.
 - Also track Education and Profession
+- Also need to add ancestral health information. This is important in our own health.
 - Consider Google Sheets as backend, easy to collaboratively edit https://docs.google.com/spreadsheets/d/1ntGaYpGblv5ojv1od-33fzXErrPjWWYnx820AcmfWLQ/edit#gid=0
 
 
